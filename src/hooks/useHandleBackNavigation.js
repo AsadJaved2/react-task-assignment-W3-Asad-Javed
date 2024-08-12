@@ -10,7 +10,7 @@ const useHandleBackNavigation = () => {
       if (location.pathname === '/listing') {
        
         localStorage.removeItem('authToken');
-        navigate('/login', { replace: true }); 
+        navigate('/', { replace: true }); 
       }
     };
 

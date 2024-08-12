@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useFetchCharacters from '../hooks/useFetchCharacters';
+import useHandleBackNavigation from '../hooks/useHandleBackNavigation'; 
 import CharacterCard from '../components/CharacterCard';
 import CharacterDetailsModal from '../components/CharacterDetailsModal';
 import Pagination from '../components/Pagination';
 import SearchFilter from '../components/SearchFilter'; 
 import '../styles/ListingPage.css'; 
-import { useNavigate } from 'react-router-dom';
-import useHandleBackNavigation from '../hooks/useHandleBackNavigation'; 
 
 const ListingPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -45,7 +45,7 @@ const ListingPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
-    navigate('/login');
+    navigate('/');
   };
 
   // Memoized search handler to avoid unnecessary re-renders

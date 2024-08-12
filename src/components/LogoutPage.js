@@ -8,7 +8,7 @@ const LogoutPage = () => {
   const handleLogout = () => {
     localStorage.removeItem('authToken');
     // Redirect to login page
-    navigate('/login'); // Use navigate for redirection
+    navigate('/'); // Use navigate for redirection
   };
 
   return (

@@ -10,7 +10,7 @@ function App() {
   return (
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/listing" element={<ListingPage />} />
+        <Route path="/" element={<ListingPage />} />
         <Route path="/logout" element={<LogoutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
