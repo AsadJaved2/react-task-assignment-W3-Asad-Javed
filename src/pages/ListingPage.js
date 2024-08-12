@@ -45,7 +45,7 @@ const ListingPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
-    navigate('/');
+    navigate('/login');
   };
 
   // Memoized search handler to avoid unnecessary re-renders
