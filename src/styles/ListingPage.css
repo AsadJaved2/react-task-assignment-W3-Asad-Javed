@@ -1,0 +1,47 @@
+/* Styles for the listing page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.app-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.loading,
+.error {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.new-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start; 
+    justify-content: space-between;
+}
+
+
+.logout-button {
+    width: 100px;
+    padding: 10px;
+    background-color: #dc3545; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Space between button and content */
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }

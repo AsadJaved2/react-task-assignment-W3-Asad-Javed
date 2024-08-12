@@ -1,0 +1,43 @@
+/* Styles for character card component */
+
+.character-card {
+    background-color: #ff0808;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: grid;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}
+
+.character-card img {
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.character-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.character-card.lightblue {
+    background-color: lightblue;
+}
+
+.character-card.lightgray {
+    background-color: lightgray;
+}
+
+.character-card.lightgreen {
+    background-color: lightgreen;
+}
