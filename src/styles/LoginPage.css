@@ -1,4 +1,4 @@
-/* Add styles specific to the login page here */
+
 .login-container {
     width: 300px;
     margin: 100px auto;
@@ -6,6 +6,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ed00b66f;
 }
 
 .form-group {
@@ -32,7 +33,7 @@
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: red;
     color: white;
     border: none;
     border-radius: 5px;
@@ -41,4 +42,8 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.Headings{
+    color: #e55b05e6;
 }

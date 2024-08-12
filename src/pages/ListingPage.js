@@ -3,24 +3,24 @@ import useFetchCharacters from '../hooks/useFetchCharacters';
 import CharacterCard from '../components/CharacterCard';
 import CharacterDetailsModal from '../components/CharacterDetailsModal';
 import Pagination from '../components/Pagination';
-import SearchFilter from '../components/SearchFilter'; // Import the SearchFilter component
-import '../styles/ListingPage.css'; // Ensure this CSS file exists
+import SearchFilter from '../components/SearchFilter'; 
+import '../styles/ListingPage.css'; 
 import { useNavigate } from 'react-router-dom';
-import useHandleBackNavigation from '../hooks/useHandleBackNavigation'; // Import the custom hook
+import useHandleBackNavigation from '../hooks/useHandleBackNavigation'; 
 
 const ListingPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({ species: '', homeworld: '' });
 
-  // Fetch characters with search term and filters
+  // Fetch characters with search term 
   const { data: characters, loading, error, totalPages } = useFetchCharacters(currentPage, searchTerm, filters);
 
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  useHandleBackNavigation(); // Use the custom hook
+  useHandleBackNavigation(); 
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -51,7 +51,7 @@ const ListingPage = () => {
   // Memoized search handler to avoid unnecessary re-renders
   const handleSearch = useCallback((term) => {
     setSearchTerm(term);
-    setCurrentPage(1); // Reset to first page when search term changes
+    setCurrentPage(1); 
   }, []);
 
   return (

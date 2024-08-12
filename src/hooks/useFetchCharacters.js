@@ -13,7 +13,6 @@ const useFetchCharacters = (currentPage, searchTerm, filters = {}) => {
       setError(null);
 
       try {
-        // Ensure filters is an object
         if (filters && typeof filters === "object") {
           // Construct the filter query string
           const filterQuery = Object.entries(filters)
@@ -26,7 +25,7 @@ const useFetchCharacters = (currentPage, searchTerm, filters = {}) => {
             searchTerm
           )}${filterQuery ? `&${filterQuery}` : ""}`;
 
-          console.log("Fetching URL:", url); // For debugging
+          console.log("Fetching URL:", url); 
 
           const response = await fetch(url);
 
@@ -36,12 +35,12 @@ const useFetchCharacters = (currentPage, searchTerm, filters = {}) => {
 
           const result = await response.json();
           setData(result.results);
-          setTotalPages(Math.ceil(result.count / 10)); // Assuming 10 results per page
+          setTotalPages(Math.ceil(result.count / 10)); 
         } else {
           throw new Error("Filters must be an object");
         }
       } catch (err) {
-        console.error("Fetch error:", err); // Log error for debugging
+        console.error("Fetch error:", err); 
         setError("Failed to fetch characters.");
       } finally {
         setLoading(false);

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/SearchFilter.css'; // Ensure this CSS file is updated as well
+import '../styles/SearchFilter.css'; 
 
 const SearchFilter = ({ search, setSearch }) => {
   const handleSearchChange = (e) => {

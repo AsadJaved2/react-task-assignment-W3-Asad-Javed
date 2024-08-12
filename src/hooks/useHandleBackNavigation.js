@@ -8,16 +8,14 @@ const useHandleBackNavigation = () => {
   useEffect(() => {
     const handleBackNavigation = () => {
       if (location.pathname === '/listing') {
-        // Logout and redirect
+       
         localStorage.removeItem('authToken');
-        navigate('/login', { replace: true }); // Use replace to avoid adding a new history entry
+        navigate('/login', { replace: true }); 
       }
     };
 
-    // Add a listener for popstate events
     window.addEventListener('popstate', handleBackNavigation);
-
-    // Clean up the listener on component unmount
+    
     return () => {
       window.removeEventListener('popstate', handleBackNavigation);
     };

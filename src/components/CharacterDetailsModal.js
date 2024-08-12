@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
 
-const CharacterDetailsModal = ({ isOpen, onRequestClose, character, homeWorld }) => {
+
+const CharacterDetailsModal = ({ isOpen, onRequestClose, character }) => {
 
   if (!character || !isOpen) return null;
 
