@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetchCharacters from '../hooks/useFetchCharacters';
 import useHandleBackNavigation from '../hooks/useHandleBackNavigation'; 
@@ -21,6 +21,14 @@ const ListingPage = () => {
   const navigate = useNavigate();
 
   useHandleBackNavigation(); 
+
+  useEffect(()=>{
+    const token = localStorage.getItem('authToken');
+    console.log("Token hai:",token);
+    if(!token){
+        navigate('/login')
+    }
+  },[navigate])
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

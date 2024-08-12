@@ -30,7 +30,7 @@ const LoginPage = () => {
         password
       });
       localStorage.setItem('authToken', response.data.token);
-      navigate('/listing');
+      navigate('/');
     } catch (err) {
       setError('Login failed');
     }
