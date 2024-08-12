@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import LoginPage from './components/LoginPage';
 import ListingPage from './pages/ListingPage';
 import LogoutPage from './components/LogoutPage';
+import ErrorPage from './pages/ErrorPage';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/listing" element={<ListingPage />} />
         <Route path="/logout" element={<LogoutPage />} />
-        {/* <Route path="*" element={<ErrorPage />} /> */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
   );
 }
